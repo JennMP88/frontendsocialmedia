@@ -1,0 +1,173 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.wrapper {
+    font-size:75px;
+    color:black;
+}
+
+.border{
+	border-bottom:solid 4px white;
+}
+
+body{
+    /* background-image: url(images/periodico4.png); */
+    font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	background-color: black;
+}
+
+.new {
+	display:flex;
+	background-color: black;
+	align-items:center;
+	font-family: 'Merriweather', serif;
+	padding-top: 20px;
+	padding-bottom: 40px;
+    padding-left: 40px;    
+}
+
+.new ul li{
+	display:inline-block;
+	align-content: left;
+	margin-left: 80px;
+}
+
+#yellowletters {
+	color:red;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+
+.whiteletters{
+	color:white;
+	font-weight: bold;
+	font-size:20px;
+	font-family: 'Oswald', sans-serif;
+	text-decoration: none;
+}
+
+a{
+	color:white;
+	text-decoration: none;}
+
+s{
+	color:rgb(80, 75, 75)}
+
+
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	/* line-height: 20px; */
+	font-size: 16px;
+    margin-left:20px;
+}
+
+
+h2{
+	margin-bottom:15px;
+}
+
+.button{
+background-color:#ccc; 
+color: black;
+padding: 10px;
+margin-top: 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+font-family: 'Oswald', sans-serif; 
+border-radius: 10px;
+}
+
+.button b {
+	color: black;
+}
+
+
+.border nav a:hover {
+	color:red;
+}
+
+.col {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin-top:60px;
+} 
+    
+.boxes {
+        width: calc(30%);
+        background-color:white;
+        min-height:200px;
+        border: 3px solid pink;
+        margin-left:20px;
+        margin-top:15px;
+        
+	}
+
+	.boxes2 {
+        width: calc(60%);
+        background-color:black;
+        min-height:200px;
+        margin-left:250px;
+		margin-top:15px;
+		justify-content: center;  
+		padding-left:80px;
+	}
+
+	.topic{
+	 height: 400px;
+	 color:white;
+	}
+
+
+	.video{
+		float:left;
+		height: 200px;
+	}
+
+	.boxes3 {
+		display:flex;
+        width: calc(80%);
+        min-height:200px;
+		margin-left:150px;
+		margin-right:150px;
+		margin-top:15px;
+		/* padding-left:10px; */
+	}
+/* .inputbox{
+	background-color: white;
+	min-height:600px;
+} */
+
+textarea{
+	width: 800px;
+	height:400px;
+	font-size:20px;
+	/* background-image: url(images/periodico4.png); */
+	
+}
+.white{	
+	background-color: white;
+	/* background-image: white; */
+	/* background-image: url(images/heart.jpg); */
+	/* background-image: url(images/heartbeating.gif); */
+	color: black;
+}
+
+footer{
+ background-color: black;
+ color: white;
+}
+
+
