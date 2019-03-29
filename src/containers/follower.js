@@ -4,7 +4,7 @@ import '../styles/search.css';
 const defaultuser = require('../assets/user.png')
 
 
-export default class Following extends React.Component {
+export default class Follower extends React.Component {
 
     render() {
         return (
@@ -14,7 +14,7 @@ export default class Following extends React.Component {
                         if (user) {
                             return (
                             <>
-                                 <div class="container border black">
+                                     <div class="container border black">
                                         <div class="row .d-flex">
 
                                             <img src={defaultuser} alt="..." class="rounded-circle" height="200" width="200" />
