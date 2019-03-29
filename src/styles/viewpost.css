@@ -18,8 +18,11 @@ p{
 
 .name{
     font-size:40px;
+    margin-left: -80%;
 }
-
+.col{
+    margin-left: -80%;
+}
 .border{
     margin-top:10%;
 }

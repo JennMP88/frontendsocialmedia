@@ -53,6 +53,7 @@ export default class Viewpost extends React.Component {
                         <div class="col-sm-8">
 
                           <p>  <div class="col name">Person</div></p>
+                          <p>  <div class="col">Comments</div></p>
                         </div>
                       </div>
                     </div>
@@ -63,6 +64,7 @@ export default class Viewpost extends React.Component {
                         <div class="col-sm-8">
 
                           <p>  <div class="col name">Person</div></p>
+                          <p>  <div class="col">Comments</div></p>
                         </div>
                       </div>
                     </div>
