@@ -23,7 +23,6 @@ export default (props) => {
 
   const loggedIn = 
   <>
-  
   <form>
           <input className="box" type="search" id="search" placeholder="Search" />
 
@@ -50,6 +49,8 @@ export default (props) => {
   <li className="nav-item">
     <Link className="nav-link" to="/createpost">createpost</Link>
  </li>
+
+
     </>
 
   return(
