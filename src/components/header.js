@@ -46,11 +46,6 @@ export default (props) => {
  </li>
 
 
-  <li className="nav-item">
-    <Link className="nav-link" to="/createpost">createpost</Link>
- </li>
-
-
     </>
 
   return(

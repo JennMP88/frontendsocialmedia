@@ -12,23 +12,24 @@ export default class Search extends React.Component {
                     (user) => {
                         if (user) {
                             return (
-                             <>
+                                <>
 
 
-<div class="container">
-  <div class="row">
-  <div class="bordering">
-  <div class="col"> <img src={defaultuser} alt="..." class="rounded-circle" height="200" width="200"/>
-  <div class="col name">Person</div>
-  </div>
-  </div>
-  </div>
-  </div>
-   
-  
 
 
-                                 
+                                    <div class="container border black">
+                                        <div class="row .d-flex">
+
+                                            <img src={defaultuser} alt="..." class="rounded-circle" height="200" width="200" />
+                                            <div class="col-sm-8">
+
+                                                <p>  <div class="col name">Person</div></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
                                 </>
                             )
                         }

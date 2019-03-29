@@ -12,10 +12,12 @@ import Logout from './containers/logout';
 import Userprofile from './containers/userprofile'; 
 import Search from './containers/search';
 
+
 // ---- Contexts
 import AuthContext from './contexts/auth';
 import Createpost from './containers/createpost';
 import Following from './containers/following';
+import Viewpost from './containers/viewpost';
 
 
 class App extends Component {
@@ -57,6 +59,7 @@ class App extends Component {
               <Route path='/userprofile' exact component={ Userprofile } />
               <Route path='/createpost' exact component={ Createpost } />
               <Route path='/logout' exact component={ Logout } />
+              <Route path='/viewpost' exact component={ Viewpost } />
               <Route component={ Error404 } />
             </Switch>
           </div>

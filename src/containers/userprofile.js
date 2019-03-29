@@ -18,16 +18,18 @@ export default class Userprofile extends React.Component {
                                 <>
 
                                     <div class="container">
-                                        <div class="row">
-                                            {/* <div class="col-sm-8"></div> */}
+                                        <div class="row .d-flex">
+                                            
                                             <img src={defaultuser} alt="..." class="rounded-circle" height="200" width="200" />
                                             <div class="col-sm-8">
                                                 <h3> Lala Sanchez </h3>
                                                 <p> Followers: 129 </p>
-                                                <p> Following: 2</p></div>
+                                                <p> Following: 2</p>
+                                                <p> <button type="button" class="btn btn-dark">Follow</button>  </p> 
+                                                </div>
                                         </div>
+                                        
                                     </div>
-
 
                                     <div class="row">
                                         <div class="col-sm-4">

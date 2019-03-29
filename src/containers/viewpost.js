@@ -1,10 +1,10 @@
 import React from 'react';
 import AuthContext from '../contexts/auth';
-import '../styles/home2.css';
+import '../styles/viewpost.css';
 const defaultuser = require('../assets/user.png')
 const placeholder = require('../assets/placeholder.jpg')
 
-export default class Home extends React.Component {
+export default class Viewpost extends React.Component {
 
   render() {
     return (
@@ -17,6 +17,7 @@ export default class Home extends React.Component {
                   <>
                     <h2>Welcome back, {user.email}</h2>
                     <h4>Your ID is: {user.uid}</h4>
+
 
 
 
@@ -45,7 +46,30 @@ export default class Home extends React.Component {
 
                   
 
-       
+                    <div class="container border black">
+                      <div class="row .d-flex">
+
+                        <img src={defaultuser} alt="..." class="rounded-circle" height="200" width="200" />
+                        <div class="col-sm-8">
+
+                          <p>  <div class="col name">Person</div></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container border black">
+                      <div class="row .d-flex">
+
+                        <img src={defaultuser} alt="..." class="rounded-circle" height="200" width="200" />
+                        <div class="col-sm-8">
+
+                          <p>  <div class="col name">Person</div></p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
 
                   </>
                 )
