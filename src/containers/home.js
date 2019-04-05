@@ -5,6 +5,13 @@ const defaultuser = require('../assets/user.png')
 const placeholder = require('../assets/placeholder.jpg')
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  
+  componentDidMount() {
+    console.log(this.props)
+  }
 
   render() {
     return (
