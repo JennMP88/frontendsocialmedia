@@ -16,15 +16,9 @@ import Following from './containers/following';
 import Viewpost from './containers/viewpost';
 import Follower from './containers/follower';
 
-
-// ---- Contexts
-import AuthContext from './contexts/auth';
-
-
-
+import axios from 'axios'
 
 class App extends Component {
-
   state = {
     user: null
   }
@@ -34,7 +28,17 @@ class App extends Component {
   componentDidMount() {
     this.unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.setState({ user }); //user shows user is logged in--->passed to auth context
+        const uid = user.uid
+
+        axios.get(`http://localhost:3001/users/${uid}`)
+          .then(({ data }) => {
+            const id = data[0].id
+
+            const fullUserInfo = Object.assign({}, user, { id })
+
+            this.setState({ user: fullUserInfo }); //user shows user is logged in--->passed to auth context
+          })
+          .catch(console.error)
       }
       else {
         this.setState({ user: null })
@@ -48,16 +52,15 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <HashRouter>
-        <AuthContext.Provider value={this.state.user}>
+    const application = this.state.user 
+      ? (<HashRouter>
           <Route path='/' component={ Header } />
           <div className='container mt-5'>
             <Switch>
               <Route path='/' exact component={ Home } />
               <Route path='/signup' exact component={ Signup } />
               <Route path='/login' exact component={ Login } />
-              <Route path='/following' exact component={Following} />
+              <Route path='/following' render={(props) => <Following {...props} user={this.state.user} />} />
               <Route path='/search' exact component={Search} />
               <Route path='/userprofile' exact component={ Userprofile } />
               <Route path='/createpost' exact component={ Createpost } />
@@ -67,9 +70,10 @@ class App extends Component {
               <Route component={ Error404 } />
             </Switch>
           </div>
-          </AuthContext.Provider>
-      </HashRouter>
-    );
+        </HashRouter>)
+      : <h2>You are not looged in.</h2>
+    
+    return application
   }
 }
 

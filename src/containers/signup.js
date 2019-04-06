@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 import AuthContext from '../contexts/auth';
 import { Redirect } from 'react-router-dom';
+import axios from 'axios'
 
 export default class Signup extends React.Component {
 
@@ -20,8 +21,21 @@ export default class Signup extends React.Component {
 
     const { email, password } = this.state;
     firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((response) => {
-        console.log('Returns: ', response);
+      .then(({ user }) => {
+        const username = user.email
+        const named = 'Foo Bar'
+        const email = user.email
+        const avatar = 'foo_bar.png'
+        const uid = user.uid
+        
+        axios.post('http://localhost:3001/users/register', {
+          uid,
+          username,
+          named,
+          email,
+          avatar,
+        }).then(x => console.log(x, 'you created a user!'))
+        
       })
       .catch(err => {
         const { message } = err;
